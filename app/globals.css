@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --navy: #0B1F3A;
+  --gold: #D4AF37;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-inter);
+    color: #333333;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-playfair);
+  }
+}
+
+@layer components {
+  .btn-navy {
+    @apply bg-navy-500 text-white font-semibold px-6 py-3 transition-all duration-200 hover:bg-navy-600 inline-flex items-center gap-2;
+  }
+
+  .btn-gold {
+    @apply bg-gold-400 text-navy-500 font-semibold px-6 py-3 transition-all duration-200 hover:bg-gold-500 inline-flex items-center gap-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-navy-500 text-navy-500 font-semibold px-6 py-3 transition-all duration-200 hover:bg-navy-500 hover:text-white inline-flex items-center gap-2;
+  }
+
+  .section-heading {
+    @apply font-serif text-3xl md:text-4xl text-navy-500 font-bold;
+  }
+
+  .section-sub {
+    @apply text-gray-500 text-lg mt-3 max-w-2xl;
+  }
+
+  .gold-rule {
+    @apply w-16 h-1 bg-gold-400 mt-4 mb-6;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
+
+/* Story content prose */
+.story-content p { margin-bottom: 1.25rem; line-height: 1.8; }
+.story-content h2 { font-family: var(--font-playfair); font-size: 1.75rem; font-weight: 700; color: var(--navy); margin: 2rem 0 1rem; }
+.story-content blockquote { border-left: 4px solid var(--gold); padding-left: 1.5rem; color: #555; font-style: italic; margin: 2rem 0; }
