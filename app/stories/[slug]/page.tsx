@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { getStoryBySlug, getRelatedStories, stories } from '@/lib/data/stories'
 import { siteConfig } from '@/lib/config'
 import { formatDate } from '@/lib/utils'
-import { CategoryBadge } from '@/components/ui/Badge'
 import StoryCard from '@/components/shared/StoryCard'
 import NewsletterSignup from '@/components/shared/NewsletterSignup'
 
@@ -62,133 +61,162 @@ export default async function StoryPage({ params }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* Hero */}
-      <section className="relative h-[50vh] min-h-[360px] overflow-hidden">
-        <Image src={story.image} alt={story.title} fill className="object-cover" priority sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-500/90 via-navy-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-8 max-w-4xl mx-auto">
-          <CategoryBadge label={story.category} className="mb-3" />
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-white leading-tight">
+      {/* Article wrapper */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
+
+        {/* ── Header ── */}
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-500">{story.category}</span>
+            <span className="text-gray-200">·</span>
+            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-400">{formatDate(story.publishDate)}</span>
+            <span className="text-gray-200">·</span>
+            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-400">{story.location}</span>
+          </div>
+
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy-500 leading-tight mb-6">
             {story.title}
           </h1>
-          <p className="mt-3 text-gray-300 text-sm">
-            By {story.author} · {formatDate(story.publishDate)}
-          </p>
+
+          {/* Share row */}
+          <div className="flex items-center gap-4 pb-6 border-b border-gray-100">
+            <span className="text-[10px] tracking-[0.2em] uppercase text-gray-400">Share</span>
+            {[
+              { label: 'Facebook', href: `https://facebook.com/sharer/sharer.php?u=${siteConfig.url}/stories/${story.slug}` },
+              { label: 'Twitter', href: `https://twitter.com/intent/tweet?url=${siteConfig.url}/stories/${story.slug}&text=${encodeURIComponent(story.title)}` },
+              { label: 'LinkedIn', href: `https://linkedin.com/sharing/share-offsite/?url=${siteConfig.url}/stories/${story.slug}` },
+            ].map((s) => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                className="text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400 hover:text-navy-500 transition-colors">
+                {s.label}
+              </a>
+            ))}
+          </div>
         </div>
-      </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col lg:flex-row gap-12">
+        {/* ── Hero image ── */}
+        <div className="relative w-full aspect-[16/9] mb-10 overflow-hidden">
+          <Image
+            src={story.image}
+            alt={story.title}
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 800px"
+          />
+        </div>
 
-          {/* Main content */}
-          <article className="flex-1 min-w-0">
-            {/* Excerpt lead */}
-            <p className="text-xl text-gray-600 leading-relaxed border-l-4 border-gold-400 pl-6 mb-10 font-serif italic">
-              {story.excerpt}
-            </p>
+        {/* ── Intro paragraph ── */}
+        <p className="text-base md:text-lg text-gray-700 leading-[1.85] mb-10">
+          {story.excerpt}
+        </p>
 
-            {/* Interview Q&A */}
-            {story.interview && story.interview.length > 0 && (
-              <div className="space-y-10">
-                {story.interview.map((qa, i) => (
-                  <div key={i} className="story-content">
-                    <div className="flex gap-4 mb-3">
-                      <span className="font-serif text-2xl font-bold text-gold-400 shrink-0">Q</span>
-                      <h3 className="font-bold text-navy-500 text-lg leading-snug pt-1">{qa.question}</h3>
-                    </div>
-                    <div className="pl-10">
-                      <p className="text-gray-600 leading-relaxed">{qa.answer}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Nominate CTA */}
-            <div className="mt-16 bg-gray-50 border border-gray-200 p-8 text-center">
-              <h3 className="font-serif text-2xl font-bold text-navy-500 mb-2">Know a Great Business?</h3>
-              <p className="text-gray-500 mb-5">Nominate them for a free feature on Local Spotlight ATL.</p>
-              <Link href="/nominate" className="inline-block px-8 py-3 bg-navy-500 text-white font-bold text-sm hover:bg-navy-600 transition-colors">
-                Nominate a Business →
-              </Link>
-            </div>
-
-            {/* Related stories */}
-            {related.length > 0 && (
-              <div className="mt-16">
-                <h3 className="font-serif text-2xl font-bold text-navy-500 mb-6">Related Stories</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {related.map((s) => (
-                    <StoryCard key={s.slug} story={s} />
+        {/* ── Interview Q&A — VoyageATL format ── */}
+        {story.interview && story.interview.length > 0 && (
+          <div className="space-y-8">
+            {story.interview.map((qa, i) => (
+              <div key={i}>
+                {/* Question — bold, no label */}
+                <p className="font-bold text-gray-900 text-base md:text-lg leading-snug mb-3">
+                  {qa.question}
+                </p>
+                {/* Answer — plain paragraphs */}
+                <div className="text-gray-700 text-base leading-[1.85] space-y-4">
+                  {qa.answer.split('\n').filter(Boolean).map((para, j) => (
+                    <p key={j}>{para}</p>
                   ))}
                 </div>
               </div>
-            )}
-          </article>
+            ))}
+          </div>
+        )}
 
-          {/* Sidebar */}
-          <aside className="lg:w-72 shrink-0 space-y-6">
-            {/* Quick facts */}
-            <div className="bg-navy-500 p-6 text-white">
-              <h3 className="font-serif font-bold text-gold-400 text-lg mb-5 pb-3 border-b border-white/10">
-                Quick Facts
-              </h3>
-              <dl className="space-y-4">
-                {[
-                  { label: 'Business', value: story.businessName },
-                  { label: 'Owner', value: story.ownerName },
-                  { label: 'Location', value: story.location },
-                  { label: 'Industry', value: story.industry },
-                  story.founded ? { label: 'Founded', value: story.founded } : null,
-                ]
-                  .filter(Boolean)
-                  .map((item) => (
-                    <div key={item!.label}>
-                      <dt className="text-gray-400 text-xs tracking-wider uppercase">{item!.label}</dt>
-                      <dd className="text-white text-sm font-semibold mt-0.5">{item!.value}</dd>
-                    </div>
-                  ))}
-                {story.website && (
-                  <div>
-                    <dt className="text-gray-400 text-xs tracking-wider uppercase">Website</dt>
-                    <dd className="mt-0.5">
-                      <a href={story.website} target="_blank" rel="noopener noreferrer"
-                        className="text-gold-400 text-sm font-semibold hover:underline break-all">
-                        {story.website.replace('https://', '')}
-                      </a>
-                    </dd>
-                  </div>
-                )}
-              </dl>
-            </div>
-
-            {/* Newsletter */}
-            <div className="bg-gray-50 border border-gray-200 p-6">
-              <h3 className="font-serif font-bold text-navy-500 text-lg mb-2">Get Weekly Stories</h3>
-              <p className="text-gray-500 text-sm mb-4">Join 5,000+ Atlanta readers.</p>
-              <NewsletterSignup variant="compact" />
-            </div>
-
-            {/* Get featured */}
-            <div className="border-2 border-gold-400 p-5 text-center">
-              <p className="font-bold text-navy-500 mb-2">Is Your Business Ready for the Spotlight?</p>
-              <p className="text-gray-500 text-xs mb-4">Free features for Metro Atlanta businesses.</p>
-              <Link href="/nominate"
-                className="block w-full py-2.5 bg-gold-400 text-navy-500 text-sm font-bold text-center hover:bg-gold-500 transition-colors">
-                Get Featured →
-              </Link>
-            </div>
-          </aside>
+        {/* ── Tags / meta row ── */}
+        <div className="mt-14 pt-8 border-t border-gray-100 flex flex-wrap items-center gap-3">
+          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400">Filed under</span>
+          <Link href={`/categories/${story.category.toLowerCase().replace(/\s+/g, '-')}`}
+            className="text-[10px] font-bold tracking-[0.2em] uppercase text-gold-500 hover:text-navy-500 transition-colors">
+            {story.category}
+          </Link>
+          <span className="text-gray-200">·</span>
+          <Link href={`/${story.location.toLowerCase().replace(/\s+/g, '-')}`}
+            className="text-[10px] font-bold tracking-[0.2em] uppercase text-gold-500 hover:text-navy-500 transition-colors">
+            {story.location}
+          </Link>
         </div>
+
+        {/* ── About the business card ── */}
+        <div className="mt-10 p-6 bg-gray-50 border-l-2 border-gold-400">
+          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-500 mb-4">About {story.businessName}</p>
+          <dl className="grid grid-cols-2 gap-4 text-sm">
+            {[
+              { label: 'Owner', value: story.ownerName },
+              { label: 'Location', value: story.location },
+              { label: 'Industry', value: story.industry },
+              story.founded ? { label: 'Founded', value: story.founded } : null,
+            ].filter(Boolean).map((item) => (
+              <div key={item!.label}>
+                <dt className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-400 mb-0.5">{item!.label}</dt>
+                <dd className="text-navy-500 font-semibold">{item!.value}</dd>
+              </div>
+            ))}
+          </dl>
+          {story.website && (
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <a href={story.website} target="_blank" rel="noopener noreferrer"
+                className="text-[11px] font-bold tracking-[0.15em] uppercase text-gold-500 hover:underline">
+                Visit {story.website.replace('https://', '')} →
+              </a>
+            </div>
+          )}
+        </div>
+
+        {/* ── Nominate CTA ── */}
+        <div className="mt-14 py-12 border-t border-b border-gray-100 text-center">
+          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-500 mb-4">Local Spotlight ATL</p>
+          <h3 className="font-serif text-2xl font-bold text-navy-500 mb-3">
+            Know a Business Like This?
+          </h3>
+          <p className="text-gray-500 text-sm mb-7 max-w-sm mx-auto leading-relaxed">
+            We feature Metro Atlanta&apos;s finest businesses — always free, always authentic.
+          </p>
+          <Link href="/nominate"
+            className="inline-block px-10 py-3.5 bg-navy-500 text-white text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-navy-600 transition-colors">
+            Nominate a Business
+          </Link>
+        </div>
+
+        {/* ── Newsletter ── */}
+        <div className="mt-14 text-center">
+          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-500 mb-3">Stay Connected</p>
+          <h3 className="font-serif text-xl font-bold text-navy-500 mb-2">Get Weekly Stories</h3>
+          <p className="text-gray-400 text-sm mb-6">Join 5,000+ Atlanta readers. One story, every Tuesday. Free.</p>
+          <NewsletterSignup />
+        </div>
+
+        {/* ── Related stories ── */}
+        {related.length > 0 && (
+          <div className="mt-16">
+            <div className="flex items-center gap-5 mb-10">
+              <div className="h-px flex-1 bg-gray-100" />
+              <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-400">Related Stories</p>
+              <div className="h-px flex-1 bg-gray-100" />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {related.map((s) => (
+                <StoryCard key={s.slug} story={s} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* Newsletter section */}
-      <section className="py-16 bg-gold-400">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <h3 className="font-serif text-2xl font-bold text-navy-500 mb-3">
-            Get Atlanta&apos;s Most Inspiring Local Stories
-          </h3>
-          <p className="text-navy-600 mb-6">One great story. Every Tuesday. Join free.</p>
+      {/* ── Footer newsletter band ── */}
+      <section className="py-20 bg-navy-500">
+        <div className="max-w-xl mx-auto px-4 text-center">
+          <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-400 mb-4">Local Spotlight ATL</p>
+          <h3 className="font-serif text-3xl font-bold text-white mb-3">Atlanta&apos;s Most Inspiring Stories</h3>
+          <p className="text-white/50 text-sm mb-8 leading-relaxed">One great story. Every Tuesday. Free forever.</p>
           <NewsletterSignup />
         </div>
       </section>
