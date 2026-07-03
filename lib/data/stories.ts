@@ -75,12 +75,12 @@ export const stories: Story[] = [
           "Money was never the only thing on the table for me. The offer was real and it was significant. But what I kept coming back to was: what happens to the client experience when we scale up that fast?\n\nWe had six active builds at the time. They wanted us managing 40 within 18 months. That math doesn't work when your whole reputation is built on the fact that clients can reach you personally. I'd rather build fewer homes and build them right than become a company where a project manager I've never met is the face of my name.\n\nCornerstone is still small by design. I think that's the product.",
       },
       {
-        question: 'Milton has a very particular character — equestrian, land-focused, private. How does that shape the homes you build here?',
+        question: "Milton has a very particular character — equestrian, land-focused, private. How does that shape the homes you build here?",
         answer:
           "Milton clients are not interested in trend-chasing. They're not building Instagram houses. They're building generational homes — properties they intend to pass to their kids, where the land matters as much as the structure itself.\n\nSo we spend a lot of time in the planning phase understanding how a family actually lives. Do the horses need to be visible from the kitchen? Does the guest suite need a separate entrance? Is there a workshop coming in three years that needs a utility connection now? The house has to serve a life, not just look good in photos.\n\nThat long-view thinking is what Milton rewards.",
       },
       {
-        question: 'What's the most important thing a homeowner can do to set a custom build up for success?',
+        question: "What's the most important thing a homeowner can do to set a custom build up for success?",
         answer:
           "Be honest about your budget from the first conversation. Not the number you think sounds responsible — your actual number, the one you've talked through with your financial advisor and your spouse.\n\nI've watched projects derail not because of bad design or bad construction, but because the client and builder were never fully aligned on financial reality from the start. Everything downstream flows from that first honest conversation. The builders who let you find out the truth in month six are not doing you any favors.",
       },
@@ -90,7 +90,7 @@ export const stories: Story[] = [
     slug: 'jennifer-hayes-realtor',
     title: 'Jennifer Hayes on Turning Down Three Recruitment Offers, Building a Boutique Real Estate Firm, and What $200M in Sales Actually Taught Her',
     excerpt:
-      'Jennifer Hayes spent eight years in mortgage banking before she ever listed a house. That background turned out to be her greatest competitive advantage. Today her boutique Johns Creek firm, Hayes Realty Group, consistently outperforms teams three times its size — not because of volume, but because of an obsessive commitment to doing fewer things better.',
+      "Jennifer Hayes spent eight years in mortgage banking before she ever listed a house. That background turned out to be her greatest competitive advantage. Today her boutique Johns Creek firm, Hayes Realty Group, consistently outperforms teams three times its size — not because of volume, but because of an obsessive commitment to doing fewer things better.",
     category: 'Real Estate',
     author: 'Local Spotlight ATL',
     publishDate: '2026-05-28',
@@ -185,7 +185,7 @@ export const stories: Story[] = [
     tags: ['fitness', 'alpharetta', 'personal-training', 'gym'],
     interview: [
       {
-        question: 'Chris, you opened Atlas in 2020 — arguably the worst possible timing for a fitness business. What made you move forward anyway?',
+        question: "Chris, you opened Atlas in 2020 — arguably the worst possible timing for a fitness business. What made you move forward anyway?",
         answer:
           "I'd been planning it for two years and I wasn't willing to let fear make the decision for me. A lot of people I respected told me to wait. Wait for normalcy. Wait for stability. But I kept thinking — the people who need coaching the most are the ones sitting at home right now losing structure, losing momentum, losing the habits they'd built.\n\nSo I opened with a very small footprint, a very tight client roster, and a clear value proposition: you will get more attention here than anywhere else, period. That turned out to be exactly what people needed in that moment.",
       },
