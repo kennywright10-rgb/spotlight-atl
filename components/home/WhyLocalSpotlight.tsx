@@ -42,21 +42,6 @@ export default function WhyLocalSpotlight() {
             </div>
           ))}
         </div>
-
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-12">
-          {[
-            { value: '240+', label: 'Stories Published' },
-            { value: '12K', label: 'Monthly Readers' },
-            { value: '40+', label: 'Neighborhoods' },
-            { value: '100%', label: 'Free to Get Featured' },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-serif text-4xl font-bold text-gold-400">{stat.value}</div>
-              <div className="text-gray-400 text-xs mt-1 tracking-wide">{stat.label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )

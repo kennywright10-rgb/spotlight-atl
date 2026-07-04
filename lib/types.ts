@@ -6,6 +6,7 @@ export interface Story {
   excerpt: string
   category: string
   author: string
+  authorSlug?: string
   publishDate: string
   image: string
   featured: boolean
@@ -17,6 +18,17 @@ export interface Story {
   founded?: string
   tags: string[]
   interview?: InterviewQuestion[]
+}
+
+export interface Author {
+  slug: string
+  name: string
+  title: string
+  bio: string
+  photo: string
+  linkedin?: string
+  twitter?: string
+  email?: string
 }
 
 export interface InterviewQuestion {

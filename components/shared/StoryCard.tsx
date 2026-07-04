@@ -10,7 +10,7 @@ interface StoryCardProps {
 
 export default function StoryCard({ story, variant = 'default' }: StoryCardProps) {
 
-  // ── Feature variant — large editorial card for lead story ──────────────────
+  // Feature variant
   if (variant === 'feature') {
     return (
       <Link href={`/stories/${story.slug}`} className="group block relative overflow-hidden">
@@ -34,7 +34,14 @@ export default function StoryCard({ story, variant = 'default' }: StoryCardProps
             {story.excerpt}
           </p>
           <div className="mt-5 flex items-center gap-3">
-            <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">By {story.author}</span>
+            {story.authorSlug ? (
+              <Link href={`/authors/${story.authorSlug}`} onClick={(e) => e.stopPropagation()}
+                className="text-[10px] tracking-[0.2em] uppercase text-white/40 hover:text-gold-300 transition-colors">
+                By {story.author}
+              </Link>
+            ) : (
+              <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">By {story.author}</span>
+            )}
             <span className="text-white/20">·</span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">{formatDate(story.publishDate)}</span>
           </div>
@@ -43,7 +50,7 @@ export default function StoryCard({ story, variant = 'default' }: StoryCardProps
     )
   }
 
-  // ── Horizontal variant ─────────────────────────────────────────────────────
+  // Horizontal variant
   if (variant === 'horizontal') {
     return (
       <Link href={`/stories/${story.slug}`} className="group flex gap-5 py-5 border-b border-gray-100 last:border-0">
@@ -67,7 +74,7 @@ export default function StoryCard({ story, variant = 'default' }: StoryCardProps
     )
   }
 
-  // ── Compact variant ────────────────────────────────────────────────────────
+  // Compact variant
   if (variant === 'compact') {
     return (
       <Link href={`/stories/${story.slug}`} className="group block py-4 border-b border-gray-100 last:border-0">
@@ -80,13 +87,12 @@ export default function StoryCard({ story, variant = 'default' }: StoryCardProps
     )
   }
 
-  // ── Default card ───────────────────────────────────────────────────────────
+  // Default card
   return (
     <Link
       href={`/stories/${story.slug}`}
       className="group flex flex-col bg-white overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]"
     >
-      {/* Image */}
       <div className="relative h-60 overflow-hidden">
         <Image
           src={story.image}
@@ -96,8 +102,6 @@ export default function StoryCard({ story, variant = 'default' }: StoryCardProps
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-
-      {/* Content */}
       <div className="flex flex-col flex-1 pt-5 pb-6 px-1">
         <div className="flex items-center gap-2 mb-3">
           <span className="editorial-label">{story.category}</span>
@@ -111,7 +115,14 @@ export default function StoryCard({ story, variant = 'default' }: StoryCardProps
           {story.excerpt}
         </p>
         <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
-          <span className="text-[10px] tracking-[0.15em] uppercase text-gray-400">{story.author}</span>
+          {story.authorSlug ? (
+            <Link href={`/authors/${story.authorSlug}`} onClick={(e) => e.stopPropagation()}
+              className="text-[10px] tracking-[0.15em] uppercase text-gray-400 hover:text-gold-500 transition-colors">
+              {story.author}
+            </Link>
+          ) : (
+            <span className="text-[10px] tracking-[0.15em] uppercase text-gray-400">{story.author}</span>
+          )}
           <span className="text-[10px] tracking-[0.15em] uppercase text-gray-400">{formatDate(story.publishDate)}</span>
         </div>
       </div>
