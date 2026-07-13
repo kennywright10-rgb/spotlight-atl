@@ -9,7 +9,7 @@ export const stories: Story[] = [
     author: 'Ken Wright',
     authorSlug: 'ken-wright',
     publishDate: '2026-07-07',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    image: '/images/afterglow/hero.jpg',
     featured: true,
     businessName: 'Afterglow Anti-Aging & IV Therapy',
     ownerName: 'Claire Robinson',
