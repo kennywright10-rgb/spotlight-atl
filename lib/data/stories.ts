@@ -21,6 +21,7 @@ export const stories: Story[] = [
       {
         question: "Tell us about Afterglow. What do you offer, and what makes your business unique?",
         answer: "Today, we care for clients from our office in Sandy Springs and through our mobile concierge services across the Metro Atlanta area. We offer IV vitamin therapy, wellness injections, regenerative skin treatments, and advanced wellness therapies, with the convenience of bringing treatments directly to clients in their homes, offices, gyms, hotels, and at events.\n\nWhat makes Afterglow unique is that it\u2019s a nurse-owned practice built on nearly a decade of clinical experience. I strive to bring the same level of compassion, attention to detail, and commitment to safety that I\u2019ve practiced throughout my nursing career into every client experience. I want every client to feel heard, cared for, and confident in the treatment plan we create together.",
+        imageAfter: { src: '/images/afterglow/office.jpg', caption: 'Claire Robinson at Afterglow\u2019s Sandy Springs office.' },
       },
       {
         question: "What inspired you to start Afterglow, and how did the business begin?",
@@ -33,6 +34,7 @@ export const stories: Story[] = [
       {
         question: "Is there a service or treatment that first-time clients should definitely know about?",
         answer: "One treatment I always encourage first-time clients to learn more about is our Niagen IV therapy. Niagen supports healthy NAD levels, helping improve cellular energy production, mental clarity, recovery, and healthy aging. It\u2019s one of my favorite treatments because it supports health at the cellular level.\n\nEvery client is different, so I always begin with a conversation about their goals and recommend treatments based on their individual needs. My goal is for every client to leave feeling educated, confident, and like the healthiest and best version of themselves.",
+        imageAfter: { src: '/images/afterglow/consultation.jpg', caption: 'A consultation at Afterglow \u2014 every treatment plan starts with a conversation about goals.' },
       },
       {
         question: "What sets Afterglow apart from other businesses in your industry?",
@@ -41,6 +43,7 @@ export const stories: Story[] = [
       {
         question: "What has been one of the biggest challenges you\u2019ve faced as a business owner, and what did you learn from it?",
         answer: "One of the biggest challenges has been balancing life as a new business owner and a new mom. Because Afterglow is still growing and my clients rely on me, I returned to work just two weeks postpartum. It wasn\u2019t an easy decision, but I was committed to continuing to provide the level of care my clients have come to expect.\n\nThat experience taught me the importance of being adaptable, asking for help when I need it, and finding balance even when life doesn\u2019t go exactly as planned. It\u2019s also given me an even greater appreciation for supporting others on their own health and wellness journeys, because I know firsthand how important it is to feel your best while juggling life\u2019s many responsibilities.",
+        imageAfter: { src: '/images/afterglow/iv-treatment.jpg', caption: 'Claire administers an IV treatment \u2014 safety and clinical precision guide every visit.' },
       },
       {
         question: "What has been your proudest moment or biggest accomplishment since opening?",
@@ -49,6 +52,7 @@ export const stories: Story[] = [
       {
         question: "Can you share a memorable client experience?",
         answer: "One experience I\u2019ll never forget was receiving a last-minute request for a mobile visit from a well-known celebrity. It was such a surreal moment because I had no idea it was coming, and it reminded me how far the business had come in such a short amount of time.\n\nWhile I always protect my clients\u2019 privacy, that experience was a meaningful milestone for me. It reinforced that people value personalized, professional care and trust Afterglow to deliver a high-quality experience wherever they are. Moments like that make me incredibly grateful for the relationships I\u2019ve built and the reputation the business has earned.",
+        imageAfter: { src: '/images/afterglow/treatment-room.jpg', caption: 'A client settles in for an IV therapy session in Afterglow\u2019s treatment room.' },
       },
       {
         question: "What advice would you give someone looking for your type of services?",

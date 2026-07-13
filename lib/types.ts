@@ -34,6 +34,7 @@ export interface Author {
 export interface InterviewQuestion {
   question: string
   answer: string
+  imageAfter?: { src: string; caption: string }
 }
 
 export interface BestOfGuide {

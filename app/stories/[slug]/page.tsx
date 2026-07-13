@@ -143,6 +143,23 @@ export default async function StoryPage({ params }: Props) {
                     <p key={j}>{para}</p>
                   ))}
                 </div>
+                {qa.imageAfter && (
+                  <figure className="mt-8">
+                    <div className="relative w-full overflow-hidden">
+                      <Image
+                        src={qa.imageAfter.src}
+                        alt={qa.imageAfter.caption}
+                        width={800}
+                        height={534}
+                        className="w-full object-cover"
+                        sizes="(max-width: 768px) 100vw, 800px"
+                      />
+                    </div>
+                    <figcaption className="mt-3 text-center text-xs tracking-wide text-gray-400 italic">
+                      {qa.imageAfter.caption}
+                    </figcaption>
+                  </figure>
+                )}
               </div>
             ))}
           </div>
