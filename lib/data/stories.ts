@@ -17,7 +17,7 @@ export const stories: Story[] = [
     industry: 'IV Therapy / Anti-Aging',
     website: 'https://afterglowivtherapy.com',
     tags: ['wellness', 'iv-therapy', 'sandy-springs', 'anti-aging'],
-    imagePosition: 'top',
+    imagePosition: 'center 20%',
     interview: [
       {
         question: "Tell us about Afterglow. What do you offer, and what makes your business unique?",
