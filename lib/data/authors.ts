@@ -6,7 +6,7 @@ export const authors: Author[] = [
     name: 'Ken Wright',
     title: 'Publisher, Local Spotlight ATL',
     bio: "Ken Wright is the founder and publisher of Local Spotlight ATL, an independently produced feature magazine spotlighting the people and businesses behind Metro Atlanta\u2019s most vibrant communities. A connector at heart, Ken started the publication to give local entrepreneurs and small business owners the kind of thoughtful, long-form coverage usually reserved for major brands. He lives and works in the Atlanta area.",
-    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
     linkedin: 'https://linkedin.com/in/kenwright',
     email: 'ken@localspotlightatl.com',
   },
