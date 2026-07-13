@@ -119,7 +119,7 @@ export default async function StoryPage({ params }: Props) {
             src={story.image}
             alt={story.title}
             fill
-            className="object-cover"
+            className={`object-cover ${story.imagePosition ?? 'object-center'}`}
             priority
             sizes="(max-width: 768px) 100vw, 800px"
           />

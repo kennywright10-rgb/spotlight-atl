@@ -17,6 +17,7 @@ export interface Story {
   website?: string
   founded?: string
   tags: string[]
+  imagePosition?: string
   interview?: InterviewQuestion[]
 }
 
