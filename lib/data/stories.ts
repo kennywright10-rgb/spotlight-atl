@@ -2,6 +2,69 @@ import type { Story } from '../types'
 
 export const stories: Story[] = [
   {
+    slug: 'afterglow-iv-therapy-sandy-springs',
+    title: "Claire Robinson on Nine Years of Nursing, Launching Afterglow Three Months Pregnant, and Building Sandy Springs\u2019 Most Trusted Wellness Practice",
+    excerpt: "Claire Robinson spent nearly nine years as a registered nurse before launching Afterglow Anti-Aging & IV Therapy in Sandy Springs \u2014 three months into her first pregnancy, during one of the most uncertain seasons of her life. She trusted her instincts anyway. Today, Afterglow serves clients from its Powers Ferry Road office and through a mobile concierge service that reaches homes, offices, gyms, hotels, and events across Metro Atlanta. What sets the practice apart is not just the menu of IV vitamin therapy, wellness injections, and regenerative skin treatments \u2014 it is the nursing-grade personalization that Claire brings to every single visit.",
+    category: 'Wellness',
+    author: 'Ken Wright',
+    authorSlug: 'ken-wright',
+    publishDate: '2026-07-07',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    featured: true,
+    businessName: 'Afterglow Anti-Aging & IV Therapy',
+    ownerName: 'Claire Robinson',
+    location: 'Sandy Springs, GA',
+    industry: 'IV Therapy / Anti-Aging',
+    website: 'https://afterglowivtherapy.com',
+    tags: ['wellness', 'iv-therapy', 'sandy-springs', 'anti-aging'],
+    interview: [
+      {
+        question: "Tell us about Afterglow. What do you offer, and what makes your business unique?",
+        answer: "Today, we care for clients from our office in Sandy Springs and through our mobile concierge services across the Metro Atlanta area. We offer IV vitamin therapy, wellness injections, regenerative skin treatments, and advanced wellness therapies, with the convenience of bringing treatments directly to clients in their homes, offices, gyms, hotels, and at events.\n\nWhat makes Afterglow unique is that it\u2019s a nurse-owned practice built on nearly a decade of clinical experience. I strive to bring the same level of compassion, attention to detail, and commitment to safety that I\u2019ve practiced throughout my nursing career into every client experience. I want every client to feel heard, cared for, and confident in the treatment plan we create together.",
+      },
+      {
+        question: "What inspired you to start Afterglow, and how did the business begin?",
+        answer: "I\u2019ve been a registered nurse for nearly nine years, with experience in pediatrics, travel nursing, and wellness medicine. Over the past four years, I developed a passion for preventative health while also going through my own personal health journey. That experience inspired me to create a business that combines medical expertise with a more personalized approach to wellness.\n\nStarting Afterglow was a leap of faith. I launched the business while I was three months pregnant with my first child and during a season of uncertainty for my family, but trusting my instincts turned out to be one of the best decisions I\u2019ve ever made.",
+      },
+      {
+        question: "What do you enjoy most about serving clients in Metro Atlanta?",
+        answer: "I love building genuine relationships with my clients and helping them feel their best. It\u2019s incredibly rewarding to educate people about their health, celebrate their progress, and watch them gain confidence as they begin feeling better.\n\nAtlanta is such a diverse and vibrant community, and I\u2019m grateful for the opportunity to care for people from all walks of life. The trust my clients place in me is something I never take for granted.",
+      },
+      {
+        question: "Is there a service or treatment that first-time clients should definitely know about?",
+        answer: "One treatment I always encourage first-time clients to learn more about is our Niagen IV therapy. Niagen supports healthy NAD levels, helping improve cellular energy production, mental clarity, recovery, and healthy aging. It\u2019s one of my favorite treatments because it supports health at the cellular level.\n\nEvery client is different, so I always begin with a conversation about their goals and recommend treatments based on their individual needs. My goal is for every client to leave feeling educated, confident, and like the healthiest and best version of themselves.",
+      },
+      {
+        question: "What sets Afterglow apart from other businesses in your industry?",
+        answer: "I think what sets Afterglow apart is the combination of being a nurse-owned practice and providing a truly personalized experience. Every client receives one-on-one attention, giving me the opportunity to understand their goals, answer their questions, and create a plan that\u2019s tailored specifically to them.\n\nI\u2019m also proud that Afterglow is built on a strong medical foundation. My nursing background shapes every aspect of the business, from prioritizing safety and compliance to ensuring clients receive honest guidance and evidence-based care.\n\nI never want anyone to feel like just another appointment. Building lasting relationships and being someone my clients can trust throughout their wellness journey is one of the most rewarding parts of what I do.",
+      },
+      {
+        question: "What has been one of the biggest challenges you\u2019ve faced as a business owner, and what did you learn from it?",
+        answer: "One of the biggest challenges has been balancing life as a new business owner and a new mom. Because Afterglow is still growing and my clients rely on me, I returned to work just two weeks postpartum. It wasn\u2019t an easy decision, but I was committed to continuing to provide the level of care my clients have come to expect.\n\nThat experience taught me the importance of being adaptable, asking for help when I need it, and finding balance even when life doesn\u2019t go exactly as planned. It\u2019s also given me an even greater appreciation for supporting others on their own health and wellness journeys, because I know firsthand how important it is to feel your best while juggling life\u2019s many responsibilities.",
+      },
+      {
+        question: "What has been your proudest moment or biggest accomplishment since opening?",
+        answer: "My proudest accomplishment has been earning the trust of my clients and watching the business grow primarily through word of mouth. There is no greater compliment than having someone recommend Afterglow to their friends and family because they had such a positive experience.\n\nI\u2019m also incredibly proud of building a business that reflects my values. From day one, my goal has been to provide safe, personalized, medically guided care while creating an experience where every client feels genuinely cared for. Seeing that vision come to life has been incredibly rewarding.",
+      },
+      {
+        question: "Can you share a memorable client experience?",
+        answer: "One experience I\u2019ll never forget was receiving a last-minute request for a mobile visit from a well-known celebrity. It was such a surreal moment because I had no idea it was coming, and it reminded me how far the business had come in such a short amount of time.\n\nWhile I always protect my clients\u2019 privacy, that experience was a meaningful milestone for me. It reinforced that people value personalized, professional care and trust Afterglow to deliver a high-quality experience wherever they are. Moments like that make me incredibly grateful for the relationships I\u2019ve built and the reputation the business has earned.",
+      },
+      {
+        question: "What advice would you give someone looking for your type of services?",
+        answer: "My biggest piece of advice is to do your research and choose a provider who prioritizes safety, education, and personalized care. Wellness treatments should never be one-size-fits-all, and you should feel comfortable asking questions and understanding exactly what you\u2019re receiving and why.\n\nIt\u2019s also important to remember that wellness is a journey, not a quick fix. The best results come from combining treatments with healthy lifestyle habits and having a provider who helps you create a plan that\u2019s tailored to your individual goals.",
+      },
+      {
+        question: "What are your goals for Afterglow over the next few years?",
+        answer: "My goal is to continue growing Afterglow while staying true to the personalized care and medical integrity the business was built on. I\u2019d love to become even more involved in the local community by partnering with other businesses, participating in community events, and continuing to educate people about proactive health and wellness.\n\nAbove all, I want Afterglow to be known as a trusted place where clients receive honest guidance, personalized care, and treatments that help them feel like the healthiest and best version of themselves.",
+      },
+      {
+        question: "Is there anything else you\u2019d like readers to know about you or Afterglow?",
+        answer: "I just want to thank the Metro Atlanta community for supporting a local, nurse-owned small business. The encouragement I\u2019ve received since opening Afterglow has meant more than I can put into words.\n\nMy hope is that Afterglow continues to be a place where people feel comfortable asking questions, learning about their health, and taking a proactive approach to wellness. If I can help someone feel healthier, more confident, and more like themselves, then I\u2019ve accomplished exactly what I set out to do.",
+      },
+    ],
+  },
+  {
     slug: 'thrive-wellness-center',
     title: "Dr. Lisa Monroe on Leaving Emergency Medicine, Building Thrive Wellness Center, and Why Recovery Is the New Performance",
     excerpt: "After 12 years in emergency medicine, Dr. Lisa Monroe walked away from the hospital to build something the healthcare system never gave her room to create — a clinic focused entirely on helping high-performing people feel and function at their best. Thrive Wellness Center in Alpharetta now has a waitlist, a loyal client base of executives and athletes, and a reputation as one of North Atlanta's most respected wellness destinations.",
