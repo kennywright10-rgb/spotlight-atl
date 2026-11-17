@@ -2,6 +2,86 @@ import type { Story } from '../types'
 
 export const stories: Story[] = [
   {
+    slug: 'davinci-home-improvements-cumming',
+    title: "Luca Lepori on 25 Years in the Trades, Building DaVinci Home Improvements, and Why Transparent Pricing Changes Everything",
+    excerpt: "Luca Lepori has been in the service industry since 1999 \u2014 long enough to watch competitors mislead homeowners about chimney problems, inflate inspection bills, and treat clients like a transaction. When he founded DaVinci Home Improvements in Cumming in 2005, he built the business around the opposite approach: transparent pricing published openly on the website, cleaning and inspection bundled together at a fair rate, and workmanship honest enough to earn more than 25 years of organic word-of-mouth growth across North Metro Atlanta.",
+    category: 'Home Services',
+    author: 'John Irvine',
+    authorSlug: 'john-irvine',
+    publishDate: '2026-07-10',
+    image: '/images/davinci/hero.jpeg',
+    featured: true,
+    businessName: 'DaVinci Home Improvements',
+    ownerName: 'Luca Lepori',
+    location: 'Cumming, GA',
+    industry: 'Handyman / Chimney / Fencing',
+    website: 'https://davincihandyman.com',
+    founded: '2005',
+    tags: ['home-services', 'chimney', 'handyman', 'cumming', 'north-atlanta'],
+    interview: [
+      {
+        question: "How long have you been in the service industry, and how did your experience shape your business?",
+        answer: "I have been in the service industry since 1999. Over the years, I gained valuable experience working in several different industries, and when I started my business in 2005, I brought all of that knowledge and experience with me. Chimney cleaning was never intended to become our most popular service, but over the years, it has grown to be just that. We combine honesty with quality workmanship and have built a very good reputation for all the services we provide.",
+        imageAfter: { src: '/images/davinci/chimney-inspection.jpeg', caption: 'A DaVinci technician inspects a chimney flue with a camera.' },
+      },
+      {
+        question: "What inspired you to start your business, and what makes your company different?",
+        answer: "It started many years ago when I first opened my business. With so much competition throughout the North Metro Atlanta market, I knew I needed to offer multiple services to keep the business growing. From the beginning, I realized that many companies were not providing customers with the quality of service they deserved. Some were even misleading customers or making false claims about chimney problems simply to sell expensive repairs.\n\nI used those experiences as motivation to build my company around honesty, integrity, and solid workmanship. We have grown organically by staying true to those values, and those same principles continue to guide the way we operate today.",
+      },
+      {
+        question: "Why is it important to have your chimney cleaned and inspected?",
+        answer: "Having your chimney cleaned and inspected is one of the most important things you can do for your fireplace. Proper maintenance helps your system operate as intended, extends its longevity, and gives homeowners peace of mind before lighting their fireplace each season.",
+      },
+      {
+        question: "Why should homeowners schedule their chimney cleaning ahead of the season?",
+        answer: "There are two main reasons homeowners should schedule their chimney cleaning before they plan on using their fireplace.\n\nFirst, DaVinci Home Improvements offers seasonal promotions during the summer to give customers better pricing while helping offset the rush when chimney season begins.\n\nSecond, once peak chimney season arrives, appointment availability becomes limited, and customers may experience delays before a technician can be scheduled. Booking early helps avoid the seasonal rush.",
+      },
+      {
+        question: "What are three signs that your chimney may need cleaning and inspection?",
+        answer: "There are three common signs that your chimney may need attention. First, creosote debris falling into the fireplace when opening the damper. Second, smoke backing up into the home while a fire is burning. Third, a strong chimney odor when the fireplace is not in use. These signs can indicate buildup or other issues inside the chimney flue that should be professionally inspected.",
+        imageAfter: { src: '/images/davinci/creosote.jpeg', caption: 'Creosote and soot buildup inside a fireplace.' },
+      },
+      {
+        question: "What is creosote, and why is it dangerous?",
+        answer: "Creosote is a black or dark-brown, tar-like substance that forms inside a chimney or flue when wood or other fuels burn. It develops from unburned wood particles, smoke, moisture, and other combustion byproducts that condense on the cooler interior walls of the chimney.\n\nOver time, this buildup can become thicker and more difficult to remove. As creosote accumulates, it can become a serious fire hazard. A chimney fire can burn at extremely high temperatures, potentially damaging the chimney structure and even melting metal components.\n\nThis is why regular chimney cleaning and annual inspections are so important. The goal is to remove hazardous creosote buildup before it creates a dangerous situation.",
+      },
+      {
+        question: "What is the difference between a chimney inspection and a chimney cleaning?",
+        answer: "A chimney inspection and a chimney cleaning are two separate but equally important parts of proper chimney maintenance.\n\nUnfortunately, some companies use an inspection as a way to get their foot in the door, only to surprise customers with a large additional cleaning charge afterward.\n\nDaVinci Home Improvements does not operate that way. We believe in being honest and upfront with our customers. Our chimney cleaning and inspection services are included together at a competitive rate, so customers know what to expect.",
+      },
+      {
+        question: "How often should a chimney be cleaned and inspected?",
+        answer: "We recommend having your chimney cleaned and inspected annually. The goal is to remove creosote before it accumulates to hazardous levels.\n\nThere are also other reasons annual maintenance is important. During the summer and fall, wasps, hornets, and mud daubers can build nests inside chimney caps, potentially obstructing the flue and preventing proper ventilation.",
+      },
+      {
+        question: "What are the dangers of using a chimney that has not been maintained?",
+        answer: "Using a fireplace without proper chimney maintenance is taking an unnecessary risk with your home and family\u2019s safety.\n\nWhenever wood is burned in a fireplace, creosote buildup is a natural byproduct. Without regular cleaning, that buildup can reach hazardous levels and increase the risk of a chimney fire.\n\nProper cleaning and inspection help identify and address these hazards before they become serious problems.",
+        imageAfter: { src: '/images/davinci/fireplace.jpeg', caption: 'A properly maintained fireplace is ready for the season.' },
+      },
+      {
+        question: "What can homeowners do to prepare for chimney season?",
+        answer: "There are a few things homeowners can do before the fall and winter fireplace season. Have your chimney professionally cleaned and inspected before the seasonal rush. Always make sure the damper is fully open before starting a fire. Burn properly seasoned hardwood, such as oak and hickory, that has been dried for at least one year.\n\nTaking these simple precautions can help homeowners prepare for a safer fireplace season.",
+      },
+      {
+        question: "What makes DaVinci Home Improvements stand out from other companies?",
+        answer: "DaVinci Home Improvements has been in the service industry for over 25 years. We are also one of the few companies in the Metro Atlanta area that believe in being completely transparent with our pricing. We publicly post our pricing on our website and other business listings so customers know what to expect before scheduling.\n\nWe believe customers deserve honesty, quality workmanship, and fair pricing without surprises.",
+      },
+      {
+        question: "What can customers expect when hiring DaVinci Home Improvements?",
+        answer: "Our customers can expect excellent customer service from the moment they schedule their appointment. We strive to provide prompt scheduling, reliable arrival times, and a clean, educational chimney cleaning and inspection experience.\n\nOnce the cleaning and inspection are complete, we take the time to educate homeowners on their fireplace system and how to use it properly. Finally, we clean our work area as if we were never there.",
+        imageAfter: { src: '/images/davinci/inspection-results.jpeg', caption: 'Walking a homeowner through the inspection results.' },
+      },
+      {
+        question: "What do you enjoy most about providing chimney services?",
+        answer: "We enjoy helping homeowners maintain their fireplaces, improve efficiency, and extend the longevity of their systems while reducing the risk of chimney fires.\n\nKeeping our customers, their families, and their property safe is our main goal. There is nothing more important to us than providing a service that gives homeowners confidence and peace of mind.",
+      },
+      {
+        question: "What are some things you wish every homeowner knew before lighting their fireplace?",
+        answer: "There are a couple of important things we wish every homeowner would consider before lighting their fireplace.\n\nFirst, knowing when your chimney was last professionally cleaned and inspected is one of the most important things you should know.\n\nSecond, always make sure your damper is fully open before starting a fire. These simple steps can help prevent unnecessary problems and contribute to a safer fireplace experience.",
+      },
+    ],
+  },
+  {
     slug: 'afterglow-iv-therapy-sandy-springs',
     title: "Claire Robinson on Nine Years of Nursing, Launching Afterglow Three Months Pregnant, and Building Sandy Springs\u2019 Most Trusted Wellness Practice",
     excerpt: "Claire Robinson spent nearly nine years as a registered nurse before launching Afterglow Anti-Aging & IV Therapy in Sandy Springs \u2014 three months into her first pregnancy, during one of the most uncertain seasons of her life. She trusted her instincts anyway. Today, Afterglow serves clients from its Powers Ferry Road office and through a mobile concierge service that reaches homes, offices, gyms, hotels, and events across Metro Atlanta. What sets the practice apart is not just the menu of IV vitamin therapy, wellness injections, and regenerative skin treatments \u2014 it is the nursing-grade personalization that Claire brings to every single visit.",
